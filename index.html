@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Home | Mink</title>
+		<link rel="Resources/facicon.JPG" href="Resources/facicon.JPG">
+		<style>
+			body, html {
+				margin: 0;
+				scroll-behavior: smooth;
+				background-color: cornsilk;
+			}
+
+			.main {
+				font-family: "Trebuchet MS", Helvetica, sans-serif;
+				font-size:100%;
+				margin-left: 120px;
+				padding: 50px;
+			}
+
+			.header {
+				position: relative;
+				text-align: center;
+				margin-left: 120px;
+			}
+
+			.header-text {
+				position: absolute;
+ 				top: 50%;
+				left: 50%;
+  				transform: translate(-50%, -50%);
+				font-size: 35px;
+				color: white;
+				font-family: "Trebuchet MS", Helvetica, sans-serif;
+			}
+
+			.header-img-crop {
+				width: 100%;
+    				height: 150px;
+    				overflow: hidden;
+			}
+
+			.title {
+				margin-top: -30px;
+				padding: 0, 15px, 15px, 15px;
+				font-family: "Trebuchet MS", Helvetica, sans-serif;
+				text-align: center;
+				font-size: 25px;
+			}
+			
+			.nav {
+				height: 100%;
+ 				width: 120px;
+ 				position: fixed;
+ 				z-index: 1; /* Stay on top */
+ 				top: 0; /* Stay at the top */
+ 				left: 0;
+ 				background-color: #111;
+ 				overflow-x: hidden; /* Disable horizontal scroll */
+ 				padding-top: 20px;
+				font-family: "Trebuchet MS", Helvetica, sans-serif;
+
+			}
+
+			.nav a {
+				padding: 6px 8px 6px 16px;
+				text-decoration: none;
+				font-size: 25px;
+				color: #818181;
+				display: block;
+
+			}
+
+			.nav a:hover {
+				color: #4d9900;
+			}
+
+			@media screen and (max-height: 450px) {
+  				.sidenav {padding-top: 15px;}
+ 				.sidenav a {font-size: 18px;}
+			}
+
+			#topBtn {
+  				display: none;
+  				position: fixed;
+  				bottom: 20px;
+  				right: 30px;
+  				z-index: 99;
+  				font-size: 23px;
+  				border: none;
+  				outline: none;
+  				background-color: black;
+  				color: white;
+  				cursor: pointer;
+  				padding: 10px;
+  				border-radius: 4px;
+				opacity: 0.75;
+				transition: 0.1s;
+			}
+
+			#topBtn:hover {
+  				background-color: #555;
+			}
+
+
+			.featured-container {
+				border: 2px solid black;
+				float: left;
+				width: 500px;
+				margin: 5px;
+			}
+
+			.featured-text {
+				font-size: 15px;
+				margin-left: 5px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="nav">
+			<div style="width:90px;height:90px;margin: 0 auto;">
+				<img src="Resources/favicon.JPG" alt="icon" style="width:100%;">
+			</div>
+			<br>
+			<a href="About.html">About</a>
+			<a href="index.html">Home</a>
+			<a href="Photos.html">Gallery</a>
+		</div>
+
+		<div class="header">
+			<div class="header-img-crop">
+				<img src="Resources/header img.JPG" alt="Header img" style="width: 100%; margin-top: -350px;">
+			</div>
+			<div class="header-text">
+				<h1>Mink Photography</h1>
+			</div>
+		</div>
+
+		<div class="main">
+		
+			<button onclick="topFunction()" id="topBtn" title="Go to top">↑</button>
+
+			<ul>
+				<li>Featured picture</li>
+				<li>News</li>
+				<li>Description</li>
+
+				<div class="featured-container">
+					<img src="Resources/water.jpg" alt="creek water" title="Featured Picture" style="width: 100%; border-bottom: 2px solid black">
+					<p class="featured-text">Hello there this is a description</p>
+				</div>
+			</ul>
+		</div>
+
+		<script>
+			//Get the button
+			var topbutton = document.getElementById("topBtn");
+
+			// When the user scrolls down 20px from the top of the document, show the button
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+  				if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+    					topbutton.style.display = "block";
+  				} else {
+    					topbutton.style.display = "none";
+  				}
+			}
+
+			// When the user clicks on the button, scroll to the top of the document
+			function topFunction() {
+  				document.body.scrollTop = 0;
+  				document.documentElement.scrollTop = 0;
+			}
+		</script>
+	</body>
+</html>
