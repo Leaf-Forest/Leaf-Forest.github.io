@@ -1,0 +1,141 @@
+body, html {
+				margin: 0;
+				scroll-behavior: smooth;
+			}
+
+			.main {
+				font-family: "Trebuchet MS", Helvetica, sans-serif;
+				margin-left: 120px;
+			}
+
+			.header {
+				position: relative;
+				text-align: center;
+				margin-left: 120px;
+			}
+
+			.header-text {
+				position: absolute;
+ 				top: 50%;
+				left: 50%;
+  				transform: translate(-50%, -50%);
+				font-size: 35px;
+				color: white;
+				font-family: "Trebuchet MS", Helvetica, sans-serif;
+			}
+
+			.header-img-crop {
+				width: 100%;
+    				height: 150px;
+    				overflow: hidden;
+			}
+
+			.title {
+				margin-top: -30;
+				padding: 0, 15px, 15px, 15px;
+				font-family: "Trebuchet MS", Helvetica, sans-serif;
+				text-align: center;
+				font-size: 25px;
+			}
+			
+			.gallery_container {
+				background-color: #f1f1f1;
+				padding: 20px;
+				overflow: hidden;
+			}
+
+			.gallery_image {
+				border: 8px solid black;
+				float: left;
+				height: 215px;
+				width: auto;
+				margin: 25px;
+				display: none; /* Hidden by default */
+				line-height: 100%;
+			}
+
+			.gallery_container img:hover {
+				box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.5);
+			}
+
+			.nav {
+				height: 100%;
+ 				width: 120px;
+ 				position: fixed;
+ 				z-index: 1; /* Stay on top */
+ 				top: 0; /* Stay at the top */
+ 				left: 0;
+ 				background-color: #111;
+ 				overflow-x: hidden; /* Disable horizontal scroll */
+ 				padding-top: 20px;
+				font-family: "Trebuchet MS", Helvetica, sans-serif;
+
+			}
+
+			.nav a {
+				padding: 6px 8px 6px 16px;
+				text-decoration: none;
+				font-size: 25px;
+				color: #818181;
+				display: block;
+
+			}
+
+			.nav a:hover {
+				color: #4d9900;
+			}
+
+			@media screen and (max-height: 450px) {
+  				.sidenav {padding-top: 15px;}
+ 				.sidenav a {font-size: 18px;}
+			}
+
+			#topBtn {
+  				display: none;
+  				position: fixed;
+  				bottom: 20px;
+  				right: 30px;
+  				z-index: 99;
+  				font-size: 23px;
+  				border: none;
+  				outline: none;
+  				background-color: black;
+  				color: white;
+  				cursor: pointer;
+  				padding: 10px;
+  				border-radius: 4px;
+				opacity: 0.75;
+				transition: 0.1s;
+			}
+
+			#topBtn:hover {
+  				background-color: #555;
+			}
+
+
+			/* The "show" class is added to the filtered elements */
+			.show {
+  				display: block;
+			}
+
+			/* Style the buttons */
+			.filter-btn {
+  				border: none;
+  				outline: none;
+  				padding: 12px 16px;
+  				background-color: #666;
+  				cursor: pointer;
+				margin-top: 5px;
+				width: 90px;
+			}
+
+			.filter-btn:hover {
+  				background-color: #336600;
+				color: white;
+			}
+
+			/* Add a dark background to the active button */
+			.filter-btn.active {
+  				background-color: #4d9900;
+  				color: white;
+			}
