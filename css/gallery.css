@@ -45,7 +45,7 @@ body, html {
 			}
 
 			.gallery_image {
-				border: 8px solid black;
+				border: 8px solid #1a1a1a;
 				float: left;
 				height: 215px;
 				width: auto;
