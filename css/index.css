@@ -126,6 +126,9 @@ body, html {
 				width: 100%;
 				line-height: 1.6;
 				font-size: 1.5rem;
+				position: fixed;
+				left: 0;
+				bottom: 0;
 			}
 
 			.header {
