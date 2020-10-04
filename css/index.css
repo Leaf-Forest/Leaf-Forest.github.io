@@ -125,10 +125,11 @@ body, html {
 				color: #999;
 				width: 100%;
 				line-height: 1.6;
-				font-size: 1.5rem;
+				font-size: 15px;
 				position: fixed;
 				left: 0;
 				bottom: 0;
+				margin-left: 120px;
 			}
 
 			.footer {
